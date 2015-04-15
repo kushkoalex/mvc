@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteBase /
+
+#RewriteCond %{HTTP_HOST} /
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule .htaccess - [F]
+RewriteRule ^(.+)$ public/index.php?url=$1 [QSA,L]
+RewriteRule (.*) public/index.php?url=$1 [QSA,L]

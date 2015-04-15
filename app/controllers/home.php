@@ -20,6 +20,16 @@ class Home extends Controller
         $this->view('home/index', ['name' => $user->name]);
 
         //User::find(1)->username;
+
+       // $conn = new MongoClient('localhost:27017');
+
+        //$mongoDB = new Mongo();
+        //$database = $mongoDB->selectDB("example");
+
+        //var_dump($conn);
+
+
+
     }
 
     public function create($username = '', $email = '')
